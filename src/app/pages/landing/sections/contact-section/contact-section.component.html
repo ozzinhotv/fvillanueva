@@ -7,39 +7,107 @@
   <div class="pointer-events-none absolute -top-24 -left-16 w-[36rem] h-[36rem] rounded-full bg-red-500/25 blur-3xl"></div>
   <div class="pointer-events-none absolute -bottom-20 -right-10 w-[28rem] h-[28rem] rounded-full bg-red-900/30 blur-2xl"></div>
 
-  <!-- Acentos -->
-  <span class="pointer-events-none absolute top-10 left-12 h-28 w-[6px] bg-red-300/50 rotate-45"></span>
-  <span class="pointer-events-none absolute top-24 left-24 h-16 w-16 rounded-full bg-red-300/25"></span>
-  <span class="pointer-events-none absolute bottom-16 right-24 h-12 w-12 border-2 border-red-200/40 rotate-12"></span>
-  <span class="pointer-events-none absolute top-1/2 left-10 h-2 w-2 bg-red-200/60"></span>
-
   <!-- Contenido -->
   <div class="relative max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-light tracking-wide mb-6">
-      ¿Tienes dudas o necesitas más información?
-    </h2>
+    <h1 class="tracking-tight leading-[1.05] text-5xl md:text-6xl lg:text-7xl text-white">
+      Contáctanos.
+    </h1>
 
-    <p class="text-base md:text-lg text-red-50/90 leading-relaxed max-w-2xl mx-auto mb-10">
-      Escríbenos o llámanos. Estaremos encantados de ayudarte con cualquier consulta
-      sobre la residencia y el legado de Carlos Raúl Villanueva.
-    </p>
+    <!-- ACCORDION -->
+    <!-- ACCORDION (líneas arriba / medio / abajo) -->
+<ul class="mt-12 max-w-3xl mx-auto border-y border-white/25 divide-y divide-white/15">
+  <!-- ITEM: Nosotros -->
+  <li>
+    <details class="group">
+      <summary
+        class="relative list-none flex items-center justify-center cursor-pointer select-none
+               py-5 text-white/95 hover:text-white"
+      >
+        <!-- Título centrado y grande -->
+        <span class="text-2xl md:text-3xl font-semibold tracking-wide">Nosotros</span>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-      <a href="mailto:fcmvillanueva@gmail.com"
-         class="btn btn-neutral text-white px-8 py-3 min-w-[14rem] hover:opacity-95">
-        Enviar correo
-      </a>
-      <a href="tel:+582127314428"
-         class="btn btn-outline border-white text-white px-8 py-3 min-w-[14rem] hover:bg-white/10">
-        Llamar ahora
-      </a>
-    </div>
+        <!-- Icono a la derecha (no desplaza el título) -->
+        <span class="absolute right-0 top-1/2 -translate-y-1/2 grid place-items-center w-10 h-10">
+          <!-- + (cerrado) -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="w-6 h-6 transition group-open:opacity-0 group-open:scale-75"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M12 4.5v15m7.5-7.5h-15"/>
+          </svg>
+          <!-- − (abierto) -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="w-6 h-6 absolute opacity-0 scale-75 transition
+                      group-open:opacity-100 group-open:scale-100"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M5 12h14"/>
+          </svg>
+        </span>
+      </summary>
 
-    <div class="space-y-2 text-red-50/90">
-      <div class="font-medium">fcmvillanueva@gmail.com</div>
-      <div>Teléfono: +58 212 7314428</div>
-      <div>Avenida Los Jabillos. Quinta Caoma #27. La Florida</div>
-      <div>Caracas – Venezuela</div>
-    </div>
+      <!-- Apertura fluida (sin max-height) -->
+      <div class="grid [grid-template-rows:0fr] group-open:[grid-template-rows:1fr]
+                  transition-[grid-template-rows] duration-400 ease-out">
+        <div class="min-h-0 overflow-hidden py-3">
+          <!-- Tu contenido ORIGINAL -->
+          <ul class="space-y-1 text-white/90">
+            <li>Paulina Villanueva - Directora</li>
+            <li>Adriana Villanueva - Subdirectora</li>
+            <li>Cecilia Castrillo - Asistente de Dirección</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </li>
+
+  <!-- ITEM: Email -->
+  <li>
+    <details class="group">
+      <summary
+        class="relative list-none flex items-center justify-center cursor-pointer select-none
+               py-5 text-white/95 hover:text-white"
+      >
+        <span class="text-2xl md:text-3xl font-semibold tracking-wide">Email</span>
+
+        <span class="absolute right-0 top-1/2 -translate-y-1/2 grid place-items-center w-10 h-10">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="w-6 h-6 transition group-open:opacity-0 group-open:scale-75"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M12 4.5v15m7.5-7.5h-15"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="w-6 h-6 absolute opacity-0 scale-75 transition
+                      group-open:opacity-100 group-open:scale-100"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M5 12h14"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="grid [grid-template-rows:0fr] group-open:[grid-template-rows:1fr]
+                  transition-[grid-template-rows] duration-400 ease-out">
+        <div class="min-h-0 overflow-hidden py-3">
+          <!-- Tu contenido ORIGINAL -->
+          <p class="text-white/90">
+            Para consultar cualquier información, envíanos un correo y con gusto te atenderemos.
+          </p>
+          <div class="font-medium">fcmvillanueva@gmail.com</div>
+        </div>
+      </div>
+    </details>
+  </li>
+</ul>
+
   </div>
 </section>
+
+  
+  <!-- <div class="space-y-2 text-red-50/90">
+    <div class="font-medium">fcmvillanueva@gmail.com</div>
+    <div>Teléfono: +58 212 7314428</div>
+    <div>Avenida Los Jabillos. Quinta Caoma #27. La Florida</div>
+    <div>Caracas – Venezuela</div>
+  </div> -->

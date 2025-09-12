@@ -1,39 +1,77 @@
-<section class="py-20 px-6 lg:px-12 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-light tracking-wide mb-6 text-black">
-            The Villanueva Residence
-          </h2>
-          <div class="w-16 h-1 bg-red-600 mx-auto mb-8"></div>
-          <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Explore the intimate spaces where the master architect lived and worked, now preserved as a living museum of modern Venezuelan architecture.
-          </p>
-        </div>
-    </div>
-     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div *ngFor="let image of displayed" class="group cursor-pointer">
-        <div class="relative overflow-hidden bg-white shadow-sm hover:shadow-lg transition-all duration-300 rounded-lg">
-          <!-- Aspect ratio cuadrado -->
-          <div class="aspect-square">
-            <img
-              [src]="image.src"
-              [alt]="image.alt || image.title"
-              class="w-full h-full object-cover transition-transform duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105"
-              loading="lazy"
-            />
-          </div>
-
-          <!-- Overlay -->
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
-              <h3 class="font-medium tracking-wide mb-2">{{ image.title }}</h3>
-              <div class="text-sm">Book Visit</div>
-            </div>
-          </div>
-
-          <!-- Abstract accent -->
-          <div class="absolute top-4 right-4 w-8 h-[3px] bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </div>
+<section class="py-20 px-6 lg:px-12">
+  <h1 class="tracking-tight leading-[1.05]
+                   text-5xl md:text-6xl lg:text-7xl text-red-600">
+    Consulta más información sobre
+  </h1>
+  <div class="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-6 mt-10">
+    <figure class="relative overflow-hidden rounded-2xl group/figure">
+      <img
+        src="/assets/img/landing/crvUcv1952.png"
+        alt="UCV 1952"
+        class="object-cover h-165 w-145 rounded-[inherit]"
+      />
+      <div
+        class="absolute inset-0 flex items-end p-6 rounded-[inherit]
+              bg-gradient-to-t from-black/40 to-transparent
+              opacity-100
+              md:opacity-0 md:transition-opacity md:duration-500
+              md:group-hover/figure:opacity-100"
+      >
+        <h3
+          class="text-8xl font-black text-red-600 
+                translate-y-0
+                md:translate-y-4 md:transition-transform md:duration-500
+                md:group-hover/figure:translate-y-0"
+        >
+          vida
+        </h3>
       </div>
-    </div>
+    </figure>
+    <figure class="rounded-2xl relative overflow-hidden group/figure">
+      <img
+        src="/assets/img/landing/obrax.jpg"
+        alt="estadio olimpico"
+        class="object-fit h-165 w-145 rounded-[inherit]"
+      />
+      <div
+        class="absolute inset-0 flex items-end p-6 rounded-[inherit]
+              bg-gradient-to-t from-black/40 to-transparent
+              opacity-100
+              md:opacity-0 md:transition-opacity md:duration-500
+              md:group-hover/figure:opacity-100"
+      >
+        <h3
+          class="text-8xl font-black text-red-600 
+                translate-y-0
+                md:translate-y-4 md:transition-transform md:duration-500
+                md:group-hover/figure:translate-y-0"
+        >
+          obra
+        </h3>
+      </div>
+    </figure>
+    <figure class="rounded-2xl relative overflow-hidden group/figure">
+      <img
+        src="/assets/img/landing/Escritos.png"
+        alt="carta"
+        class="object-fit h-165 w-145 rounded-[inherit]"
+      />
+      <div
+        class="absolute inset-0 flex items-end p-6 rounded-[inherit]
+              bg-gradient-to-t from-black/40 to-transparent
+              opacity-100
+              md:opacity-0 md:transition-opacity md:duration-500
+              md:group-hover/figure:opacity-100"
+      >
+        <h3
+          class="text-8xl font-black text-red-600 
+                translate-y-0
+                md:translate-y-4 md:transition-transform md:duration-500
+                md:group-hover/figure:translate-y-0"
+        >
+          escritos
+        </h3>
+      </div>
+    </figure>
+  </div>
 </section>
