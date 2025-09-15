@@ -2,7 +2,11 @@
   <app-hero-bio/>
   @for (s of sections; track s.id) {
     <div [ngClass]="s.bandClass">
-      <app-bio-ui [title]="s.title" [contentComponent]="s.component"/>
+      <app-bio-ui
+        [title]="s.title"
+        [contentComponent]="s.component"
+        [open]="openedId === s.id"
+        (openedChange)="onOpenedChange(s.id, $event)"/>
     </div>
   }
 </section>
