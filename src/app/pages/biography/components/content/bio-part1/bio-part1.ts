@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-bio-part1',
   imports: [],
   templateUrl: './bio-part1.html',
-  styleUrl: './bio-part1.css'
 })
 export class BioPart1 {
 
