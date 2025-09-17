@@ -1,0 +1,42 @@
+<section class="relative py-16 sm:py-20 px-6 lg:px-12 bg-white">
+  <div class="mx-auto max-w-6xl">
+    <div class="grid items-center gap-10 lg:grid-cols-2">
+
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <single-img-carousel
+            [colors]="['#e2e8f0', '#fca5a5', '#fecaca', '#fee2e2']"
+            heightClass="h-64 sm:h-80 md:h-[28rem]">
+          </single-img-carousel>
+        </div>
+      </div>
+
+      <div class="card rounded-3xl shadow-xl bg-gradient-to-br from-rose-50/60 via-white to-white ring-1 ring-rose-100">
+        <div class="card-body p-8 md:p-10 space-y-6">
+
+          <!-- Acento rojo sutil -->
+          <div class="h-1.5 w-20 rounded-full bg-gradient-to-r from-rose-600 to-red-500"></div>
+
+          <!-- Título con alto contraste -->
+          <h2 class="text-3xl md:text-4xl font-semibold leading-tight text-slate-900">
+            {{ title }}
+          </h2>
+
+          <p class="text-slate-700 leading-relaxed">
+            Esta sección está en desarrollo. Si deseas más información o colaborar,
+            escríbenos a
+            <a class="underline decoration-rose-300 underline-offset-4 hover:text-rose-700" [href]="'mailto:' + email">
+              {{ email }}
+            </a>.
+          </p>
+
+          <a class="btn btn-ghost text-rose-700 hover:bg-rose-50 w-fit" routerLink="/">
+            Volver al inicio
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>

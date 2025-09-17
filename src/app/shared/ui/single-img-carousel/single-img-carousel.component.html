@@ -1,0 +1,35 @@
+<div class="relative w-full select-none rounded-2xl overflow-hidden"
+     [ngClass]="heightClass">
+  <!-- Placeholder (una sola “diapositiva” visible) -->
+  <div class="w-full h-full transition-colors duration-300"
+       [style.background]="colors[index]">
+  </div>
+
+  <!-- Flechas -->
+        <button type="button"
+                class="btn btn-circle btn-sm md:btn-md absolute left-2 top-1/2 -translate-y-1/2"
+                aria-label="Anterior"
+                (click)="prev()">‹</button>
+
+        <button type="button"
+                class="btn btn-circle btn-sm md:btn-md absolute right-2 top-1/2 -translate-y-1/2"
+                aria-label="Siguiente"
+                (click)="next()">›</button>
+
+  <!-- Dots -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+                <button
+                type="button"
+                *ngFor="let _ of colors; let i = index"
+                class="rounded-full transition-all ring-1 ring-rose-300/60"
+                [class.bg-rose-600]="i === index"
+                [class.bg-rose-300]="i !== index"
+                [style.width.px]="i === index ? 10 : 8"
+                [style.height.px]="i === index ? 10 : 8"
+                [attr.aria-label]="'Ir al ' + (i + 1)"
+                [attr.aria-current]="i === index ? 'true' : null"
+                (click)="goTo(i)">
+                </button>
+        </div>
+
+</div>
