@@ -19,19 +19,25 @@ import { BioPart4 } from './components/content/bio-part4/bio-part4';
 })
 export class BiographyComponent {
   openedId: string | null = null;
+
   sections: BioSection[] = [
     { id: 'bio-1', title: 'Orígenes y formación (1900–1928)', component: BioPart1 },
     { id: 'bio-2', title: 'Primeras obras y gestión pública',   component: BioPart2, bandClass: 'bg-gray-200' },
-    { id: 'bio-3', title: 'Vivienda, ciudad y CUC',            component: BioPart3, bandClass: 'bg-gray-300' },
+    { id: 'bio-3', title: 'Vivienda, ciudad y CUC',            component: BioPart3},
     { id: 'bio-4', title: 'Docencia, instituciones y legado',  component: BioPart4, bandClass: 'bg-red-600' },
   ];
-    onOpenedChange(id: string, isOpen: boolean) {
-    // Abrir uno: asigna; Cerrar el mismo: null; 
-    // Ignora toggles de otros al cerrarse para no pisar el estado.
+
+  onOpenedChange(id: string, isOpen: boolean) {
     if (isOpen) {
       this.openedId = id;
+      // evitar el “salto”: ancla suave al INICIO del panel abierto
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     } else if (this.openedId === id) {
       this.openedId = null;
-    } // si se cerró otro distinto, no toques openedId
+    }
   }
 }
+

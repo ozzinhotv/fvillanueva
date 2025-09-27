@@ -1,12 +1,13 @@
 <section class="w-full min-h-screen bg-white text-gray-800">
   <app-hero-bio/>
   @for (s of sections; track s.id) {
-    <div [ngClass]="s.bandClass">
+    <!-- le damos id para el scroll y banda si aplica -->
+    <div [ngClass]="s.bandClass" [attr.id]="s.id">
       <app-bio-ui
         [title]="s.title"
         [contentComponent]="s.component"
         [open]="openedId === s.id"
-        (openedChange)="onOpenedChange(s.id, $event)"/>
+        (openedChange)="onOpenedChange(s.id, $event)" />
     </div>
   }
 </section>
