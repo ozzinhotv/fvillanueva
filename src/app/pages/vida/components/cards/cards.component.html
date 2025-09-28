@@ -1,0 +1,50 @@
+<!-- SIN <li> aquí -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
+  <!-- lado izquierdo (pares) -->
+  <div class="order-2 lg:order-1 lg:col-start-1 lg:pr-16" *ngIf="index % 2 === 0; else leftSpacer">
+    <div class="relative">
+      <span class="hidden lg:block absolute -right-[9px] top-5 h-4 w-4 rounded-full bg-red-600 ring-4 ring-white"></span>
+      <details class="collapse collapse-arrow bg-white border border-neutral-200 shadow-lg">
+        <summary class="collapse-title text-xl font-bold text-neutral-900 select-none hover:text-red-700 transition">{{ year }}</summary>
+        <div class="collapse-content">
+          <div class="grid gap-4 lg:grid-cols-5">
+            <p class="lg:col-span-3 text-neutral-700 leading-relaxed">{{ text }}</p>
+            <div class="lg:col-span-2">
+              <div class="w-full h-40 sm:h-52 lg:h-40 rounded-lg border border-neutral-200 bg-gradient-to-br from-red-50 to-neutral-100"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <ng-template #leftSpacer>
+    <div class="order-2 lg:order-1 lg:col-start-1 lg:pr-16"></div>
+  </ng-template>
+
+  <!-- lado derecho (impares) -->
+  <div class="order-1 lg:order-2 lg:col-start-2 lg:pl-16" *ngIf="index % 2 === 1; else rightSpacer">
+    <div class="relative">
+      <span class="hidden lg:block absolute -left-[9px] top-5 h-4 w-4 rounded-full bg-red-600 ring-4 ring-white"></span>
+      <details class="collapse collapse-arrow bg-white border border-neutral-200 shadow-lg">
+        <summary class="collapse-title text-xl font-bold text-neutral-900 select-none hover:text-red-700 transition">{{ year }}</summary>
+        <div class="collapse-content">
+          <div class="grid gap-4 lg:grid-cols-5">
+            <p class="lg:col-span-3 text-neutral-700 leading-relaxed">{{ text }}</p>
+            <div class="lg:col-span-2">
+              <div class="w-full h-40 sm:h-52 lg:h-40 rounded-lg border border-neutral-200 bg-gradient-to-br from-red-50 to-neutral-100"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <ng-template #rightSpacer>
+    <div class="order-1 lg:order-2 lg:col-start-2 lg:pl-16"></div>
+  </ng-template>
+
+  <!-- separador móvil -->
+  <div class="lg:hidden flex items-center gap-3">
+    <span class="h-2.5 w-2.5 rounded-full bg-red-600"></span>
+    <span class="h-[1px] grow bg-red-600"></span>
+  </div>
+</div>
